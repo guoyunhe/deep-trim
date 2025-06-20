@@ -1,4 +1,15 @@
 {
+  "name": "@guoyunhe/deep-trim",
+  "description": "Recursively deep trim all string attributes",
+  "keywords": [
+    "trim",
+    "deep-trim",
+    "recursive",
+    "string",
+    "text",
+    "object",
+    "array"
+  ],
   "homepage": "https://github.com/guoyunhe/deep-trim#readme",
   "bugs": {
     "url": "https://github.com/guoyunhe/deep-trim/issues"
@@ -8,6 +19,7 @@
     "url": "git+https://github.com/guoyunhe/deep-trim.git"
   },
   "funding": "https://github.com/sponsors/guoyunhe",
+  "license": "MIT",
   "author": {
     "name": "Guo Yunhe",
     "email": "i@guoyunhe.me"
@@ -79,5 +91,8 @@
     "doc": {
       "basename": "/deep-trim/"
     }
+  },
+  "dependencies": {
+    "is-plain-object": "^5.0.0"
   }
 }

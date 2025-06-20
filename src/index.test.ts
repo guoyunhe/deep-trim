@@ -1,11 +1,30 @@
 import { deepTrim } from '.';
 
-describe('deepTrim', () => {
-  it('normal', async () => {
-    expect(deepTrim('Foo', 'Bar')).toBe('Foo Bar');
-  });
+it('deep trim string', async () => {
+  expect(deepTrim(' foo bar ')).toBe('foo bar');
+});
 
-  it('lastName upper case', async () => {
-    expect(deepTrim('Foo', 'Bar', { lastNameUpperCase: true })).toBe('Foo BAR');
+it('deep trim array', async () => {
+  expect(deepTrim([' foo ', ' bar ', 123])).toEqual(['foo', 'bar', 123]);
+});
+
+it('deep trim object', async () => {
+  const date = new Date();
+  expect(
+    deepTrim({
+      foo: ' foo ',
+      bar: ' bar ',
+      foobar: [' foo ', ' bar ', 123],
+      nope: false,
+      num: 123,
+      date,
+    }),
+  ).toEqual({
+    foo: 'foo',
+    bar: 'bar',
+    foobar: ['foo', 'bar', 123],
+    nope: false,
+    num: 123,
+    date,
   });
 });
