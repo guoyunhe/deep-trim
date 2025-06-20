@@ -15,7 +15,7 @@ npm i -S @guoyunhe/deep-trim
 ## Example
 
 ```js
-import deepTrim from '@guoyunhe/deep-trim';
+import { deepTrim } from '@guoyunhe/deep-trim';
 
 const data = deepTrim(formData);
 ```
